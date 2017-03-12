@@ -17,14 +17,10 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
     var itemsPerRow : CGFloat = 2.0
     var itemsPerColumn : CGFloat = 2.0
     
+    @IBOutlet weak var searchField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiHelper.searchForCards(search: "ysera") {
-            self.cards = $0
-            DispatchQueue.main.async {
-                self.updateCollection()
-            }
-        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,6 +29,15 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)*/
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func searchForCard(_ sender: UITextField) {
+        apiHelper.searchForCards(search: sender.text!) {
+            self.cards = $0
+            DispatchQueue.main.async {
+                self.updateCollection()
+            }
+        }
     }
     
     func updateCollection() {

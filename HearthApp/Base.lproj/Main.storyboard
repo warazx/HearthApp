@@ -91,8 +91,14 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <action selector="searchForCard:" destination="lrB-xU-K3x" eventType="editingDidEndOnExit" id="wdS-QE-zWb"/>
+                            </connections>
                         </textField>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchField" destination="Kx5-Z5-eYq" id="s7y-kQ-Dr8"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvE-c4-wQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
