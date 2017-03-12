@@ -42,7 +42,7 @@
         <scene sceneID="snp-2Y-XE3">
             <objects>
                 <collectionViewController id="lrB-xU-K3x" customClass="CardCollectionViewController" customModule="HearthApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="k0d-UR-YJS">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k0d-UR-YJS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,10 +83,11 @@
                             <outlet property="delegate" destination="lrB-xU-K3x" id="gM4-Cx-fvO"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ed6-Rp-Bg5">
                         <nil key="title"/>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" id="Kx5-Z5-eYq">
-                            <rect key="frame" x="60" y="7" width="200" height="30"/>
+                            <rect key="frame" x="85" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -95,7 +96,9 @@
                                 <action selector="searchForCard:" destination="lrB-xU-K3x" eventType="editingDidEndOnExit" id="wdS-QE-zWb"/>
                             </connections>
                         </textField>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="Lgu-jY-L6w"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchField" destination="Kx5-Z5-eYq" id="s7y-kQ-Dr8"/>
                     </connections>

@@ -83,7 +83,6 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
             DispatchQueue.main.async {
                 let image = UIImage(data: data)
                 cell.ImageView.image = image
-                NSLog("Setting text in cell")
                 }
             } else {
                 NSLog("Unable to load image")
