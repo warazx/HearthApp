@@ -46,31 +46,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jst-79-GxY">
-                            <size key="itemSize" width="150" height="224"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jst-79-GxY">
+                            <size key="itemSize" width="149" height="222"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="BtB-j4-fdW" customClass="CardCollectionViewCell" customModule="HearthApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="224"/>
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="224"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="149" height="222"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v7O-Qm-g7u">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="224"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="149" height="222"/>
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="v7O-Qm-g7u" secondAttribute="trailing" id="33e-Na-fpx"/>
                                     <constraint firstItem="v7O-Qm-g7u" firstAttribute="top" secondItem="BtB-j4-fdW" secondAttribute="top" id="Ccs-WJ-O2F"/>
                                     <constraint firstItem="v7O-Qm-g7u" firstAttribute="leading" secondItem="BtB-j4-fdW" secondAttribute="leading" id="qCD-pa-Wb0"/>
                                     <constraint firstAttribute="bottom" secondItem="v7O-Qm-g7u" secondAttribute="bottom" id="qO0-Ok-Sx4"/>
                                 </constraints>
+                                <size key="customSize" width="149" height="222"/>
                                 <connections>
                                     <outlet property="ImageView" destination="v7O-Qm-g7u" id="OYF-Pl-Rj8"/>
                                 </connections>
@@ -81,11 +83,20 @@
                             <outlet property="delegate" destination="lrB-xU-K3x" id="gM4-Cx-fvO"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Ed6-Rp-Bg5"/>
+                    <navigationItem key="navigationItem" id="Ed6-Rp-Bg5">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" id="Kx5-Z5-eYq">
+                            <rect key="frame" x="60" y="7" width="200" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                        </textField>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZvE-c4-wQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="138"/>
+            <point key="canvasLocation" x="1929.375" y="138.38028169014083"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MMB-Qc-j3v">

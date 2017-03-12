@@ -14,7 +14,7 @@ class HearthApiHelper {
     private let cardSearchUrl = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/"
     
     func searchForCards(search: String, onComplete: @escaping ([Card]) -> Void) {
-        var request = URLRequest(url: URL(string: cardSearchUrl + search)!)
+        var request = URLRequest(url: URL(string: cardSearchUrl + search + "?collectible=1")!)
         request.httpMethod = "GET"
         request.setValue(apiKey, forHTTPHeaderField: "X-Mashape-Key")
         let task = URLSession.shared.dataTask(with: request) {

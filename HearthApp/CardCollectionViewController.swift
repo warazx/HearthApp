@@ -10,14 +10,16 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CardCollectionViewController: UICollectionViewController {
+class CardCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let apiHelper = HearthApiHelper()
     var cards : [Card] = []
     var image = UIImage(named: "Apple_Swift_Logo")
+    var itemsPerRow : CGFloat = 2.0
+    var itemsPerColumn : CGFloat = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiHelper.searchForCards(search: "Wyrm") {
+        apiHelper.searchForCards(search: "ysera") {
             self.cards = $0
             DispatchQueue.main.async {
                 self.updateCollection()
@@ -84,6 +86,20 @@ class CardCollectionViewController: UICollectionViewController {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenRect = view.bounds
+        var cellWidth = screenRect.width
+        var cellHeight = screenRect.height * 0.85
+        if cards.count > 1 {
+            cellWidth /= itemsPerColumn
+            cellHeight /= itemsPerRow
+        }
+        
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
 
     // MARK: UICollectionViewDelegate
 
@@ -115,5 +131,4 @@ class CardCollectionViewController: UICollectionViewController {
     
     }
     */
-
 }
