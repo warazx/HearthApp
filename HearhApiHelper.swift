@@ -26,32 +26,33 @@ class HearthApiHelper {
     private func beginTask(_ request: URLRequest, onComplete: @escaping ([Card]) -> Void) {
         let task = URLSession.shared.dataTask(with: request) {
             (data : Data?, response : URLResponse?, error : Error?) in
-            var cards : [Card] = []
             if let unwrappedData = data {
                 let jsonData = JSON(data: unwrappedData)
-                for item in jsonData.arrayValue {
-                    cards.append(self.parseCard(item))
-                    NSLog("Added card")
-                }
+                let cards = self.parseJsonData(jsonArray: jsonData)
+                onComplete(cards)
             }
-            onComplete(cards)
         }
         task.resume()
     }
 
-    private func parseCard(_ item: JSON) -> Card {
-        let id = item["cardId"].stringValue
-        let name = item["name"].stringValue
-        let set = CardSet.selectSet(name: item["cardSet"].stringValue)
-        let type = CardType.selectType(name: item["type"].stringValue)
-        let rarity = CardRarity.selectRarity(name: item["rarity"].stringValue)
-        let cost = item["cost"].intValue
-        let attack = item["attack"].intValue
-        let health = item["health"].intValue
-        let playerClass = PlayerClass.selectClass(name: item["playerClass"].stringValue)
-        let imageURL = item["img"].stringValue
-        let text = item["text"].stringValue
-        
-        return Card(cardId: id, name: name, cardSet: set, type: type, rarity: rarity, cost: cost, attack: attack, health: health, class: playerClass, imageURL: imageURL, text: text)
+    private func parseJsonData(jsonArray: JSON) -> [Card] {
+        var cards : [Card] = []
+        for item in jsonArray.arrayValue {
+            let id = item["cardId"].stringValue
+            let name = item["name"].stringValue
+            let set = CardSet.selectSet(name: item["cardSet"].stringValue)
+            let type = CardType.selectType(name: item["type"].stringValue)
+            let rarity = CardRarity.selectRarity(name: item["rarity"].stringValue)
+            let cost = item["cost"].intValue
+            let attack = item["attack"].intValue
+            let health = item["health"].intValue
+            let playerClass = PlayerClass.selectClass(name: item["playerClass"].stringValue)
+            let imageURL = item["img"].stringValue
+            let text = item["text"].stringValue
+            
+            cards.append(Card(cardId: id, name: name, cardSet: set, type: type, rarity: rarity, cost: cost, attack: attack, health: health, class: playerClass, imageURL: imageURL, text: text))
+            NSLog("Added card")
+        }
+        return cards
     }
 }
