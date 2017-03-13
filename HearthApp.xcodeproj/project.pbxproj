@@ -13,14 +13,15 @@
 		0EA89BFB1E717BDF00D695D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA89BF91E717BDF00D695D6 /* LaunchScreen.storyboard */; };
 		0EA89C031E717DF200D695D6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA89C021E717DF200D695D6 /* StartViewController.swift */; };
 		0EA89C051E717E2100D695D6 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA89C041E717E2100D695D6 /* CardCollectionViewController.swift */; };
-		0EA89C091E71808900D695D6 /* HearhApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA89C081E71808900D695D6 /* HearhApiHelper.swift */; };
 		0EF8F4201E7194AF00959967 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F41F1E7194AF00959967 /* Card.swift */; };
 		0EF8F4221E71961700959967 /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4211E71961700959967 /* CardSet.swift */; };
 		0EF8F4261E71995900959967 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4251E71995900959967 /* CardType.swift */; };
 		0EF8F4291E7199C800959967 /* CardRarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4281E7199C800959967 /* CardRarity.swift */; };
 		0EF8F42B1E719A4600959967 /* PlayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F42A1E719A4600959967 /* PlayerClass.swift */; };
 		0EF8F42D1E71A67C00959967 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F42C1E71A67C00959967 /* CardCollectionViewCell.swift */; };
-		0EF8F4311E76D59200959967 /* BuildDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4301E76D59200959967 /* BuildDeckViewController.swift */; };
+		0EF8F4341E76E90A00959967 /* DeckClassPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4331E76E90A00959967 /* DeckClassPickerViewController.swift */; };
+		0EF8F4361E76EAB000959967 /* HearhApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4351E76EAB000959967 /* HearhApiHelper.swift */; };
+		0EF8F4381E76EC5800959967 /* DeckBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4371E76EC5800959967 /* DeckBuilderViewController.swift */; };
 		394AAFC25387C4338C12004B /* Pods_HearthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770112F0D010C75048FD106E /* Pods_HearthApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,14 +34,15 @@
 		0EA89BFC1E717BDF00D695D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA89C021E717DF200D695D6 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0EA89C041E717E2100D695D6 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
-		0EA89C081E71808900D695D6 /* HearhApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HearhApiHelper.swift; path = ../HearhApiHelper.swift; sourceTree = "<group>"; };
 		0EF8F41F1E7194AF00959967 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0EF8F4211E71961700959967 /* CardSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		0EF8F4251E71995900959967 /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		0EF8F4281E7199C800959967 /* CardRarity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRarity.swift; sourceTree = "<group>"; };
 		0EF8F42A1E719A4600959967 /* PlayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerClass.swift; sourceTree = "<group>"; };
 		0EF8F42C1E71A67C00959967 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		0EF8F4301E76D59200959967 /* BuildDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildDeckViewController.swift; sourceTree = "<group>"; };
+		0EF8F4331E76E90A00959967 /* DeckClassPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckClassPickerViewController.swift; sourceTree = "<group>"; };
+		0EF8F4351E76EAB000959967 /* HearhApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HearhApiHelper.swift; sourceTree = "<group>"; };
+		0EF8F4371E76EC5800959967 /* DeckBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckBuilderViewController.swift; sourceTree = "<group>"; };
 		12819E3D95C79CF7735060CF /* Pods-HearthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HearthApp/Pods-HearthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		770112F0D010C75048FD106E /* Pods_HearthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HearthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C1E23942010051546456BA /* Pods-HearthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HearthApp/Pods-HearthApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,11 +86,12 @@
 				0EA89BF71E717BDF00D695D6 /* Assets.xcassets */,
 				0EA89BF91E717BDF00D695D6 /* LaunchScreen.storyboard */,
 				0EA89BFC1E717BDF00D695D6 /* Info.plist */,
-				0EA89C081E71808900D695D6 /* HearhApiHelper.swift */,
+				0EF8F4351E76EAB000959967 /* HearhApiHelper.swift */,
 				0EA89C021E717DF200D695D6 /* StartViewController.swift */,
 				0EA89C041E717E2100D695D6 /* CardCollectionViewController.swift */,
 				0EF8F42C1E71A67C00959967 /* CardCollectionViewCell.swift */,
-				0EF8F4301E76D59200959967 /* BuildDeckViewController.swift */,
+				0EF8F4331E76E90A00959967 /* DeckClassPickerViewController.swift */,
+				0EF8F4371E76EC5800959967 /* DeckBuilderViewController.swift */,
 				0EF8F41F1E7194AF00959967 /* Card.swift */,
 				0EF8F4271E71997800959967 /* Enums */,
 			);
@@ -247,16 +250,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF8F4341E76E90A00959967 /* DeckClassPickerViewController.swift in Sources */,
 				0EF8F42B1E719A4600959967 /* PlayerClass.swift in Sources */,
 				0EF8F4291E7199C800959967 /* CardRarity.swift in Sources */,
 				0EA89C051E717E2100D695D6 /* CardCollectionViewController.swift in Sources */,
-				0EA89C091E71808900D695D6 /* HearhApiHelper.swift in Sources */,
 				0EF8F4201E7194AF00959967 /* Card.swift in Sources */,
 				0EF8F4261E71995900959967 /* CardType.swift in Sources */,
 				0EA89BF11E717BDF00D695D6 /* AppDelegate.swift in Sources */,
+				0EF8F4381E76EC5800959967 /* DeckBuilderViewController.swift in Sources */,
 				0EF8F4221E71961700959967 /* CardSet.swift in Sources */,
+				0EF8F4361E76EAB000959967 /* HearhApiHelper.swift in Sources */,
 				0EF8F42D1E71A67C00959967 /* CardCollectionViewCell.swift in Sources */,
-				0EF8F4311E76D59200959967 /* BuildDeckViewController.swift in Sources */,
 				0EA89C031E717DF200D695D6 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

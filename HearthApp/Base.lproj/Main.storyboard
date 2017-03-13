@@ -34,7 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Build Deck"/>
                                 <connections>
-                                    <segue destination="dIp-aU-UMZ" kind="show" id="juN-eP-Cjg"/>
+                                    <segue destination="dIp-aU-UMZ" kind="show" id="5Z8-kD-a69"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,7 +49,7 @@
         <!--Pick a Class-->
         <scene sceneID="P8e-yq-JVG">
             <objects>
-                <viewController id="dIp-aU-UMZ" sceneMemberID="viewController">
+                <viewController id="dIp-aU-UMZ" customClass="DeckClassPickerViewController" customModule="HearthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ytv-h5-CaG"/>
                         <viewControllerLayoutGuide type="bottom" id="CPH-e3-lyy"/>
@@ -58,49 +58,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-Jp-aKX">
-                                <rect key="frame" x="20" y="72" width="280" height="488"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-Jp-aKX">
+                                <rect key="frame" x="20" y="28" width="280" height="520"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lha-Zx-bvc">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="162.5"/>
+                                    <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wdB-Uo-muM">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="173.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warrior_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-K1-iD9">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="162.5"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shaman_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ViN-Kx-L6l">
-                                                <rect key="frame" x="93.5" y="0.0" width="93" height="162.5"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rogue_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cZg-KC-0qp">
-                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="162.5"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-oY-fLO">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="173.5"/>
+                                                <state key="normal" title="Warrior" image="warrior_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="7qt-Ty-c50"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwa-24-R0z">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="173.5"/>
+                                                <state key="normal" title="Shaman" image="shaman_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="UU5-tR-hhJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWQ-sw-nfF">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="173.5"/>
+                                                <state key="normal" title="Rogue" image="rogue_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="ugU-aW-d7d"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uq0-YO-wql">
-                                        <rect key="frame" x="0.0" y="162.5" width="280" height="163"/>
+                                    <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="msq-1U-mbR">
+                                        <rect key="frame" x="0.0" y="173.5" width="280" height="173"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paladin_icon" translatesAutoresizingMaskIntoConstraints="NO" id="dO4-Wr-NeV">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="163"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hunter_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UKq-yN-H0S">
-                                                <rect key="frame" x="93.5" y="0.0" width="93" height="163"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="druid_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0Bh-7p-a4O">
-                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="163"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9t-q9-bD8">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="173"/>
+                                                <state key="normal" title="Paladin" image="paladin_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="FpX-UH-JeK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YZ-aA-okM">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="173"/>
+                                                <state key="normal" title="Hunter" image="hunter_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="pgt-cP-N4d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNC-0V-Acp">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="173"/>
+                                                <state key="normal" title="Druid" image="druid_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="1kl-MB-n9E"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MyS-Iu-6E8">
-                                        <rect key="frame" x="0.0" y="325.5" width="280" height="162.5"/>
+                                    <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cii-VG-i8J">
+                                        <rect key="frame" x="0.0" y="346.5" width="280" height="173.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warlock_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vs5-fa-yOg">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="162.5"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mage_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fBD-E4-4u8">
-                                                <rect key="frame" x="93.5" y="0.0" width="93" height="162.5"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="priest_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-w2-0gs">
-                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="162.5"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-im-roz">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="173.5"/>
+                                                <state key="normal" title="Warlock" image="warlock_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="1Nb-za-56D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1v-aB-IH7">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="173.5"/>
+                                                <state key="normal" title="Mage" image="mage_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="Q7U-uW-j7g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-ML-siX">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="173.5"/>
+                                                <state key="normal" title="Priest" image="priest_icon"/>
+                                                <connections>
+                                                    <action selector="classPicked:" destination="dIp-aU-UMZ" eventType="touchUpInside" id="Clv-r6-UHu"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -108,17 +144,50 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CPH-e3-lyy" firstAttribute="top" secondItem="eHb-Jp-aKX" secondAttribute="bottom" constant="8" symbolic="YES" id="Hhx-e6-3xS"/>
-                            <constraint firstAttribute="trailing" secondItem="eHb-Jp-aKX" secondAttribute="trailing" constant="20" symbolic="YES" id="Vck-Tt-4pT"/>
-                            <constraint firstItem="eHb-Jp-aKX" firstAttribute="leading" secondItem="GPi-Y1-FO1" secondAttribute="leading" constant="20" symbolic="YES" id="eId-Cq-gx1"/>
-                            <constraint firstItem="eHb-Jp-aKX" firstAttribute="top" secondItem="Ytv-h5-CaG" secondAttribute="bottom" constant="8" symbolic="YES" id="yRB-NY-sH6"/>
+                            <constraint firstItem="eHb-Jp-aKX" firstAttribute="leading" secondItem="GPi-Y1-FO1" secondAttribute="leading" constant="20" symbolic="YES" id="44M-Ps-3HF"/>
+                            <constraint firstAttribute="bottom" secondItem="eHb-Jp-aKX" secondAttribute="bottom" constant="20" symbolic="YES" id="axE-DM-xZe"/>
+                            <constraint firstItem="eHb-Jp-aKX" firstAttribute="top" secondItem="Ytv-h5-CaG" secondAttribute="bottom" constant="8" symbolic="YES" id="g6g-tE-7GF"/>
+                            <constraint firstAttribute="trailing" secondItem="eHb-Jp-aKX" secondAttribute="trailing" constant="20" symbolic="YES" id="wJ6-5S-9Og"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick a Class" id="pIH-9K-6eC"/>
+                    <connections>
+                        <segue destination="2Og-XO-2jm" kind="show" identifier="classpicker" id="cDE-Um-HNC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jM-wi-CDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.5" y="906.33802816901414"/>
+            <point key="canvasLocation" x="1074" y="905"/>
+        </scene>
+        <!--Deck Builder View Controller-->
+        <scene sceneID="85e-rO-UtO">
+            <objects>
+                <viewController id="2Og-XO-2jm" customClass="DeckBuilderViewController" customModule="HearthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jwk-Cv-UBN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ik8-3I-5vt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3vu-d6-BJn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFP-DW-2x3">
+                                <rect key="frame" x="139" y="274" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="rFP-DW-2x3" id="fMU-me-2QU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEP-zS-Mm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="906"/>
         </scene>
         <!--Card Collection View Controller-->
         <scene sceneID="snp-2Y-XE3">
