@@ -29,14 +29,96 @@
                                     <segue destination="lrB-xU-K3x" kind="show" id="fbO-eV-UFs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fy-wu-c8l">
+                                <rect key="frame" x="105" y="231" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Build Deck"/>
+                                <connections>
+                                    <segue destination="dIp-aU-UMZ" kind="show" id="juN-eP-Cjg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="28h-Mp-Fbn"/>
+                    <navigationItem key="navigationItem" id="pGo-1e-56A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Pick a Class-->
+        <scene sceneID="P8e-yq-JVG">
+            <objects>
+                <viewController id="dIp-aU-UMZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ytv-h5-CaG"/>
+                        <viewControllerLayoutGuide type="bottom" id="CPH-e3-lyy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GPi-Y1-FO1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-Jp-aKX">
+                                <rect key="frame" x="20" y="72" width="280" height="488"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lha-Zx-bvc">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="162.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warrior_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-K1-iD9">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="162.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shaman_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ViN-Kx-L6l">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="162.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rogue_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cZg-KC-0qp">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="162.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uq0-YO-wql">
+                                        <rect key="frame" x="0.0" y="162.5" width="280" height="163"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paladin_icon" translatesAutoresizingMaskIntoConstraints="NO" id="dO4-Wr-NeV">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="163"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hunter_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UKq-yN-H0S">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="163"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="druid_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0Bh-7p-a4O">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="163"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MyS-Iu-6E8">
+                                        <rect key="frame" x="0.0" y="325.5" width="280" height="162.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warlock_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vs5-fa-yOg">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="162.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mage_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fBD-E4-4u8">
+                                                <rect key="frame" x="93.5" y="0.0" width="93" height="162.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="priest_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-w2-0gs">
+                                                <rect key="frame" x="186.5" y="0.0" width="93.5" height="162.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CPH-e3-lyy" firstAttribute="top" secondItem="eHb-Jp-aKX" secondAttribute="bottom" constant="8" symbolic="YES" id="Hhx-e6-3xS"/>
+                            <constraint firstAttribute="trailing" secondItem="eHb-Jp-aKX" secondAttribute="trailing" constant="20" symbolic="YES" id="Vck-Tt-4pT"/>
+                            <constraint firstItem="eHb-Jp-aKX" firstAttribute="leading" secondItem="GPi-Y1-FO1" secondAttribute="leading" constant="20" symbolic="YES" id="eId-Cq-gx1"/>
+                            <constraint firstItem="eHb-Jp-aKX" firstAttribute="top" secondItem="Ytv-h5-CaG" secondAttribute="bottom" constant="8" symbolic="YES" id="yRB-NY-sH6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pick a Class" id="pIH-9K-6eC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jM-wi-CDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.5" y="906.33802816901414"/>
         </scene>
         <!--Card Collection View Controller-->
         <scene sceneID="snp-2Y-XE3">
@@ -96,7 +178,6 @@
                                 <action selector="searchForCard:" destination="lrB-xU-K3x" eventType="editingDidEndOnExit" id="wdS-QE-zWb"/>
                             </connections>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="Lgu-jY-L6w"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -126,4 +207,15 @@
             <point key="canvasLocation" x="230" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="druid_icon" width="256" height="256"/>
+        <image name="hunter_icon" width="256" height="256"/>
+        <image name="mage_icon" width="256" height="256"/>
+        <image name="paladin_icon" width="256" height="256"/>
+        <image name="priest_icon" width="256" height="256"/>
+        <image name="rogue_icon" width="256" height="256"/>
+        <image name="shaman_icon" width="256" height="256"/>
+        <image name="warlock_icon" width="256" height="256"/>
+        <image name="warrior_icon" width="256" height="256"/>
+    </resources>
 </document>

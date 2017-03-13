@@ -20,6 +20,7 @@
 		0EF8F4291E7199C800959967 /* CardRarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4281E7199C800959967 /* CardRarity.swift */; };
 		0EF8F42B1E719A4600959967 /* PlayerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F42A1E719A4600959967 /* PlayerClass.swift */; };
 		0EF8F42D1E71A67C00959967 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F42C1E71A67C00959967 /* CardCollectionViewCell.swift */; };
+		0EF8F4311E76D59200959967 /* BuildDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF8F4301E76D59200959967 /* BuildDeckViewController.swift */; };
 		394AAFC25387C4338C12004B /* Pods_HearthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770112F0D010C75048FD106E /* Pods_HearthApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		0EF8F4281E7199C800959967 /* CardRarity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRarity.swift; sourceTree = "<group>"; };
 		0EF8F42A1E719A4600959967 /* PlayerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerClass.swift; sourceTree = "<group>"; };
 		0EF8F42C1E71A67C00959967 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0EF8F4301E76D59200959967 /* BuildDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildDeckViewController.swift; sourceTree = "<group>"; };
 		12819E3D95C79CF7735060CF /* Pods-HearthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HearthApp/Pods-HearthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		770112F0D010C75048FD106E /* Pods_HearthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HearthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C1E23942010051546456BA /* Pods-HearthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HearthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HearthApp/Pods-HearthApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				0EA89C021E717DF200D695D6 /* StartViewController.swift */,
 				0EA89C041E717E2100D695D6 /* CardCollectionViewController.swift */,
 				0EF8F42C1E71A67C00959967 /* CardCollectionViewCell.swift */,
+				0EF8F4301E76D59200959967 /* BuildDeckViewController.swift */,
 				0EF8F41F1E7194AF00959967 /* Card.swift */,
 				0EF8F4271E71997800959967 /* Enums */,
 			);
@@ -253,6 +256,7 @@
 				0EA89BF11E717BDF00D695D6 /* AppDelegate.swift in Sources */,
 				0EF8F4221E71961700959967 /* CardSet.swift in Sources */,
 				0EF8F42D1E71A67C00959967 /* CardCollectionViewCell.swift in Sources */,
+				0EF8F4311E76D59200959967 /* BuildDeckViewController.swift in Sources */,
 				0EA89C031E717DF200D695D6 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
