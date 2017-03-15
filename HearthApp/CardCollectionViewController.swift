@@ -11,16 +11,24 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class CardCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
     let apiHelper = HearthApiHelper()
     var cards : [Card] = []
-    var image = UIImage(named: "Apple_Swift_Logo")
     var itemsPerRow : CGFloat = 2.0
     var itemsPerColumn : CGFloat = 2.0
+    var searchText : String = ""
+    var mode : Mode = .Search
     
     @IBOutlet weak var searchField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        switch(mode) {
+        case .Search:
+                searchForCard(word: searchText)
+        case .Class:
+                searchForClassCollection(playerClass: searchText)
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,23 +39,26 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func searchForCard(_ sender: UITextField) {
-        apiHelper.searchForCards(search: sender.text!) {
-            self.cards = $0
-            DispatchQueue.main.async {
-                self.updateCollection()
-            }
+    
+    
+    func searchForCard(word: String) {
+        apiHelper.searchForCards(search: word) {
+            self.updateCollection(cards: $0)
         }
     }
     
-    func updateCollection() {
-        collectionView?.reloadData()
-        NSLog("Reloading cells... cards contain \(cards.count)")
+    func searchForClassCollection(playerClass: String) {
+        apiHelper.searchForClassCollection(playerClass: playerClass) {
+            self.updateCollection(cards: $0)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func updateCollection(cards : [Card]) {
+        self.cards = cards
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+            NSLog("Reloading cells... cards contain \(cards.count)")
+        }
     }
 
     /*
@@ -103,6 +114,11 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         }
         
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    enum Mode {
+        case Search
+        case Class
     }
 
     // MARK: UICollectionViewDelegate

@@ -23,6 +23,16 @@ class HearthApiHelper {
         }
     }
     
+    func searchForClassCollection(playerClass: String, onComplete: @escaping ([Card]) -> Void) {
+        let url = URL(string: "https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/" + playerClass + "?collectible=1")
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.setValue(apiKey, forHTTPHeaderField: "X-Mashape-Key")
+        beginTask(request) {
+            onComplete($0)
+        }
+    }
+    
     private func beginTask(_ request: URLRequest, onComplete: @escaping ([Card]) -> Void) {
         let task = URLSession.shared.dataTask(with: request) {
             (data : Data?, response : URLResponse?, error : Error?) in
