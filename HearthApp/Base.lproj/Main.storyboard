@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PU-sQ-fzP">
-                                        <rect key="frame" x="62" y="0.0" width="31.5" height="30.5"/>
+                                        <rect key="frame" x="62" y="0.0" width="31.5" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4PU-sQ-fzP" secondAttribute="height" multiplier="1:1" id="b8Z-Fy-VZp"/>
                                         </constraints>
@@ -93,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WI-Dt-YRs">
-                                        <rect key="frame" x="186.5" y="0.0" width="31.5" height="30.5"/>
+                                        <rect key="frame" x="186.5" y="0.0" width="31.5" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9WI-Dt-YRs" secondAttribute="height" multiplier="1:1" id="wJq-Bg-ud6"/>
                                         </constraints>
@@ -131,7 +131,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Da-54-rt9">
-                                <rect key="frame" x="16" y="168.5" width="288" height="30"/>
+                                <rect key="frame" x="16" y="168" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
@@ -139,9 +139,88 @@
                                     <action selector="searchForCards:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="dYb-Ph-dz1"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Sets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXD-AR-fWI">
+                                <rect key="frame" x="16" y="206" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Us2-vE-JE2">
+                                <rect key="frame" x="20" y="234" width="280" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-dT-Ifr">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="Naxxramas" image="naxx_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="62c-uu-h3E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-7Z-hYb">
+                                        <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="Goblins vs Gnomes" image="gvg_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Psh-sm-Psu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJW-II-1HZ">
+                                        <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="Blackrock Mountain" image="brm_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X64-2s-Z0J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGQ-XZ-F1y">
+                                        <rect key="frame" x="210" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="The Grand Tournament" image="tgt_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGL-88-373"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Us2-vE-JE2" secondAttribute="height" multiplier="4:1" id="DKv-Gf-qzN"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="eMB-Eh-kp8">
+                                <rect key="frame" x="20" y="312" width="280" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBM-y1-gUK">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="The League of Explorers" image="loe_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQi-jj-9cw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spJ-Jk-R48">
+                                        <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="Whispers of the Old Gods" image="wog_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4rq-N1-hUg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-RG-e9b">
+                                        <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="Karazhan" image="kz_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lC0-bH-vYI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y89-Fh-M12">
+                                        <rect key="frame" x="210" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="Mean Streets of Gadgetzan" image="msog_icon"/>
+                                        <connections>
+                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdg-T4-No4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eMB-Eh-kp8" secondAttribute="height" multiplier="4:1" id="eAc-vU-z0s"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="KXD-AR-fWI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0x3-NA-TLW"/>
                             <constraint firstItem="Wke-wU-XBP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3nA-Gi-4X3"/>
                             <constraint firstItem="HQX-vj-wlS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="6kO-7X-4fX"/>
                             <constraint firstItem="Wke-wU-XBP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8Yw-ND-Oi4"/>
@@ -151,8 +230,17 @@
                             <constraint firstItem="4Da-54-rt9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N3J-lk-8hb"/>
                             <constraint firstItem="4Da-54-rt9" firstAttribute="top" secondItem="Wke-wU-XBP" secondAttribute="bottom" constant="8" symbolic="YES" id="Plk-JB-23S"/>
                             <constraint firstItem="Wke-wU-XBP" firstAttribute="top" secondItem="l2w-28-nKk" secondAttribute="bottom" constant="8" symbolic="YES" id="aQI-zO-bDD"/>
+                            <constraint firstItem="Us2-vE-JE2" firstAttribute="top" secondItem="KXD-AR-fWI" secondAttribute="bottom" constant="8" symbolic="YES" id="hz7-hy-VLd"/>
+                            <constraint firstItem="KXD-AR-fWI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jeF-V5-qqG"/>
+                            <constraint firstItem="KXD-AR-fWI" firstAttribute="top" secondItem="4Da-54-rt9" secondAttribute="bottom" constant="8" symbolic="YES" id="kmm-Dd-V6J"/>
+                            <constraint firstItem="eMB-Eh-kp8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="l0A-UB-U4D"/>
+                            <constraint firstItem="eMB-Eh-kp8" firstAttribute="width" secondItem="eMB-Eh-kp8" secondAttribute="height" multiplier="4:1" id="npe-FX-4bz"/>
+                            <constraint firstItem="eMB-Eh-kp8" firstAttribute="top" secondItem="Us2-vE-JE2" secondAttribute="bottom" constant="8" symbolic="YES" id="o3B-UB-DSL"/>
                             <constraint firstItem="HQX-vj-wlS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oKl-pL-Tf7"/>
                             <constraint firstItem="HQX-vj-wlS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="r6w-yA-Uuj"/>
+                            <constraint firstAttribute="trailing" secondItem="eMB-Eh-kp8" secondAttribute="trailing" constant="20" symbolic="YES" id="rWn-Fh-aFC"/>
+                            <constraint firstItem="Us2-vE-JE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="wzY-NM-2Sq"/>
+                            <constraint firstAttribute="trailing" secondItem="Us2-vE-JE2" secondAttribute="trailing" constant="20" symbolic="YES" id="zoU-qU-vgp"/>
                             <constraint firstItem="l2w-28-nKk" firstAttribute="top" secondItem="HQX-vj-wlS" secondAttribute="bottom" constant="8" symbolic="YES" id="zvn-RR-jTh"/>
                         </constraints>
                     </view>
@@ -242,15 +330,23 @@
         </scene>
     </scenes>
     <resources>
+        <image name="brm_icon" width="446" height="300"/>
         <image name="druid_icon" width="256" height="256"/>
+        <image name="gvg_icon" width="350" height="300"/>
         <image name="hunter_icon" width="256" height="256"/>
+        <image name="kz_icon" width="532" height="323"/>
+        <image name="loe_icon" width="413" height="236"/>
         <image name="mage_icon" width="256" height="256"/>
+        <image name="msog_icon" width="446" height="326"/>
+        <image name="naxx_icon" width="446" height="300"/>
         <image name="paladin_icon" width="256" height="256"/>
         <image name="priest_icon" width="256" height="256"/>
         <image name="rogue_icon" width="256" height="256"/>
         <image name="shaman_icon" width="256" height="256"/>
+        <image name="tgt_icon" width="401" height="296"/>
         <image name="warlock_icon" width="256" height="256"/>
         <image name="warrior_icon" width="256" height="256"/>
+        <image name="wog_icon" width="446" height="326"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dfl-cg-rKx"/>
