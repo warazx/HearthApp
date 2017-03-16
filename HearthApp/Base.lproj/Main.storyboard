@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PU-sQ-fzP">
-                                        <rect key="frame" x="62" y="0.0" width="31.5" height="31"/>
+                                        <rect key="frame" x="62" y="0.0" width="31.5" height="30.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4PU-sQ-fzP" secondAttribute="height" multiplier="1:1" id="b8Z-Fy-VZp"/>
                                         </constraints>
@@ -93,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WI-Dt-YRs">
-                                        <rect key="frame" x="186.5" y="0.0" width="31.5" height="31"/>
+                                        <rect key="frame" x="186.5" y="0.0" width="31.5" height="30.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9WI-Dt-YRs" secondAttribute="height" multiplier="1:1" id="wJq-Bg-ud6"/>
                                         </constraints>
@@ -283,7 +283,6 @@
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="v7O-Qm-g7u" secondAttribute="trailing" id="33e-Na-fpx"/>
                                     <constraint firstItem="v7O-Qm-g7u" firstAttribute="top" secondItem="BtB-j4-fdW" secondAttribute="top" id="Ccs-WJ-O2F"/>

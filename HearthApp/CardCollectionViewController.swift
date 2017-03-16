@@ -23,6 +23,7 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadBackground()
         switch(mode) {
         case .Search:
             searchForCard(word: searchText)
@@ -41,7 +42,11 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         // Do any additional setup after loading the view.
     }
     
-    
+    func loadBackground() {
+        
+        self.collectionView?.backgroundView = UIImageView(image: UIImage(named: "background.jpg"))
+        //self.collectionView?.backgroundColor = UIColor(patternImage: bgImage)
+    }
     
     func searchForCard(word: String) {
         apiHelper.searchForCards(search: word) {

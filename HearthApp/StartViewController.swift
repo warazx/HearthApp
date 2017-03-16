@@ -14,7 +14,9 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadBackground()
+        
+        //self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background"))
         // Do any additional setup after loading the view.
     }
 
@@ -32,6 +34,14 @@ class StartViewController: UIViewController {
 
     @IBAction func goToClassCollection(_ sender: UIButton) {
         performSegue(withIdentifier: "classCollection", sender: sender)
+    }
+    
+    func loadBackground() {
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "background.jpg")?.draw(in: self.view.bounds)
+        let bgImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: bgImage)
     }
     
     // MARK: - Navigation
