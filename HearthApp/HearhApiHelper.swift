@@ -11,26 +11,38 @@ import SwiftyJSON
     
 class HearthApiHelper {
     private let apiKey = "gPScgW09k8mshKfpTv5zgWLrQ7vjp1uRziAjsnl0N0L1hEHZkK"
-    private let allCardsUrl = "https://omgvamp-hearthstone-v1.p.mashape.com/cards"
-    private let cardSearchUrl = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/"
+    private let header = "X-Mashape-Key"
     
     func searchForCards(search: String, onComplete: @escaping ([Card]) -> Void) {
-        var request = URLRequest(url: URL(string: cardSearchUrl + search + "?collectible=1")!)
-        request.httpMethod = "GET"
-        request.setValue(apiKey, forHTTPHeaderField: "X-Mashape-Key")
+        let urlString = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/" + search + "?collectible=1"
+        let request = createRequest(stringForUrl: urlString)
         beginTask(request) {
             onComplete($0)
         }
     }
     
     func searchForClassCollection(playerClass: String, onComplete: @escaping ([Card]) -> Void) {
-        let url = URL(string: "https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/" + playerClass + "?collectible=1")
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        request.setValue(apiKey, forHTTPHeaderField: "X-Mashape-Key")
+        let urlString = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/" + playerClass + "?collectible=1"
+        let request = createRequest(stringForUrl: urlString)
         beginTask(request) {
             onComplete($0)
         }
+    }
+    
+    func searchForSetCollection(cardSet: String, onComplete: @escaping ([Card]) -> Void) {
+        let urlString = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/" + cardSet + "?collectible=1"
+        let request = createRequest(stringForUrl: urlString)
+        beginTask(request) {
+            onComplete($0)
+        }
+    }
+    
+    private func createRequest(stringForUrl: String) -> URLRequest {
+        let url = URL(string: stringForUrl.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!)
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.setValue(apiKey, forHTTPHeaderField: header)
+        return request
     }
     
     private func beginTask(_ request: URLRequest, onComplete: @escaping ([Card]) -> Void) {

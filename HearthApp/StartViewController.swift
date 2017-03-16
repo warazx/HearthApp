@@ -22,6 +22,9 @@ class StartViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func goToSetCollection(_ sender: UIButton) {
+        performSegue(withIdentifier: "setCollection", sender: sender)
+    }
     
     @IBAction func searchForCards(_ sender: UITextField) {
         performSegue(withIdentifier: "searchAll", sender: sender)
@@ -43,6 +46,11 @@ class StartViewController: UIViewController {
             let button = sender as! UIButton
             destination.searchText = (button.titleLabel?.text)!
             destination.mode = .Class
+        }
+        if segue.identifier == "setCollection", let destination = segue.destination as? CardCollectionViewController {
+            let button = sender as! UIButton
+            destination.searchText = (button.titleLabel?.text)!
+            destination.mode = .Set
         }
         
         // Get the new view controller using segue.destinationViewController.

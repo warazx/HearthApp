@@ -152,28 +152,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="Naxxramas" image="naxx_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="62c-uu-h3E"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLU-iJ-OlB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-7Z-hYb">
                                         <rect key="frame" x="70" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="Goblins vs Gnomes" image="gvg_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Psh-sm-Psu"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gpz-sz-u6S"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJW-II-1HZ">
                                         <rect key="frame" x="140" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="Blackrock Mountain" image="brm_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X64-2s-Z0J"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaj-s0-fc5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGQ-XZ-F1y">
                                         <rect key="frame" x="210" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="The Grand Tournament" image="tgt_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGL-88-373"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bb-iI-y1c"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -188,28 +188,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="The League of Explorers" image="loe_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQi-jj-9cw"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deu-ou-hKs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spJ-Jk-R48">
                                         <rect key="frame" x="70" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="Whispers of the Old Gods" image="wog_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4rq-N1-hUg"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fg4-2l-wZg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-RG-e9b">
                                         <rect key="frame" x="140" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="Karazhan" image="kz_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lC0-bH-vYI"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4W-CG-hkv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y89-Fh-M12">
                                         <rect key="frame" x="210" y="0.0" width="70" height="70"/>
                                         <state key="normal" title="Mean Streets of Gadgetzan" image="msog_icon"/>
                                         <connections>
-                                            <action selector="goToClassCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdg-T4-No4"/>
+                                            <action selector="goToSetCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C8P-Bq-VYm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -249,6 +249,7 @@
                         <outlet property="searchTextField" destination="4Da-54-rt9" id="vVy-lS-End"/>
                         <segue destination="lrB-xU-K3x" kind="show" identifier="classCollection" id="Dfl-cg-rKx"/>
                         <segue destination="lrB-xU-K3x" kind="show" identifier="searchAll" id="vxX-7n-Z79"/>
+                        <segue destination="lrB-xU-K3x" kind="show" identifier="setCollection" id="1eU-Fh-2lK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -349,6 +350,6 @@
         <image name="wog_icon" width="446" height="326"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dfl-cg-rKx"/>
+        <segue reference="1eU-Fh-2lK"/>
     </inferredMetricsTieBreakers>
 </document>

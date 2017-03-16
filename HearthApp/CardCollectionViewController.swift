@@ -25,9 +25,11 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         super.viewDidLoad()
         switch(mode) {
         case .Search:
-                searchForCard(word: searchText)
+            searchForCard(word: searchText)
         case .Class:
-                searchForClassCollection(playerClass: searchText)
+            searchForClassCollection(playerClass: searchText)
+        case .Set:
+            searchForSetCollection(cardSet: searchText)
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -49,6 +51,12 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
     
     func searchForClassCollection(playerClass: String) {
         apiHelper.searchForClassCollection(playerClass: playerClass) {
+            self.updateCollection(cards: $0)
+        }
+    }
+    
+    func searchForSetCollection(cardSet: String) {
+        apiHelper.searchForSetCollection(cardSet: cardSet) {
             self.updateCollection(cards: $0)
         }
     }
@@ -119,6 +127,7 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
     enum Mode {
         case Search
         case Class
+        case Set
     }
 
     // MARK: UICollectionViewDelegate
