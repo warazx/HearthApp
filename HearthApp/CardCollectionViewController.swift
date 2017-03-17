@@ -13,11 +13,12 @@ private let reuseIdentifier = "Cell"
 class CardCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let apiHelper = HearthApiHelper()
-    var cards : [Card] = []
-    var itemsPerRow : CGFloat = 2.0
-    var itemsPerColumn : CGFloat = 2.0
-    var searchText : String = ""
-    var mode : Mode = .Search
+    var cards: [Card] = []
+    var itemsPerRow: CGFloat = 2.0
+    var itemsPerColumn: CGFloat = 2.0
+    var searchText: String = ""
+    var mode: Mode = .Search
+    var manaCost: Int?
     
     @IBOutlet weak var searchField: UITextField!
     
@@ -55,13 +56,13 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
     }
     
     func searchForClassCollection(playerClass: String) {
-        apiHelper.searchForClassCollection(playerClass: playerClass) {
+        apiHelper.searchForClassCollection(playerClass: playerClass, manaCost: manaCost) {
             self.updateCollection(cards: $0)
         }
     }
     
     func searchForSetCollection(cardSet: String) {
-        apiHelper.searchForSetCollection(cardSet: cardSet) {
+        apiHelper.searchForSetCollection(cardSet: cardSet, manaCost: manaCost) {
             self.updateCollection(cards: $0)
         }
     }

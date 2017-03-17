@@ -130,7 +130,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Da-54-rt9">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Da-54-rt9">
                                 <rect key="frame" x="16" y="168" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -217,6 +217,26 @@
                                     <constraint firstAttribute="width" secondItem="eMB-Eh-kp8" secondAttribute="height" multiplier="4:1" id="eAc-vU-z0s"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mana Cost Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZB-VV-uQd">
+                                <rect key="frame" x="16" y="390" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-1" minValue="-1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3DK-Vd-uMM">
+                                <rect key="frame" x="14" y="418" width="242" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="manaSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="rJN-ek-XoB"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt7-TU-juS">
+                                <rect key="frame" x="262" y="423" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -227,13 +247,16 @@
                             <constraint firstItem="l2w-28-nKk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Hmq-i0-65k"/>
                             <constraint firstItem="4Da-54-rt9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="IrT-0d-FJu"/>
                             <constraint firstAttribute="trailing" secondItem="l2w-28-nKk" secondAttribute="trailing" constant="20" symbolic="YES" id="M4t-Yu-DPB"/>
+                            <constraint firstItem="oZB-VV-uQd" firstAttribute="top" secondItem="eMB-Eh-kp8" secondAttribute="bottom" constant="8" symbolic="YES" id="MKn-vk-hic"/>
                             <constraint firstItem="4Da-54-rt9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N3J-lk-8hb"/>
                             <constraint firstItem="4Da-54-rt9" firstAttribute="top" secondItem="Wke-wU-XBP" secondAttribute="bottom" constant="8" symbolic="YES" id="Plk-JB-23S"/>
                             <constraint firstItem="Wke-wU-XBP" firstAttribute="top" secondItem="l2w-28-nKk" secondAttribute="bottom" constant="8" symbolic="YES" id="aQI-zO-bDD"/>
+                            <constraint firstItem="oZB-VV-uQd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dIj-Sf-TXh"/>
                             <constraint firstItem="Us2-vE-JE2" firstAttribute="top" secondItem="KXD-AR-fWI" secondAttribute="bottom" constant="8" symbolic="YES" id="hz7-hy-VLd"/>
                             <constraint firstItem="KXD-AR-fWI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jeF-V5-qqG"/>
                             <constraint firstItem="KXD-AR-fWI" firstAttribute="top" secondItem="4Da-54-rt9" secondAttribute="bottom" constant="8" symbolic="YES" id="kmm-Dd-V6J"/>
                             <constraint firstItem="eMB-Eh-kp8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="l0A-UB-U4D"/>
+                            <constraint firstItem="oZB-VV-uQd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="la8-Wp-Ype"/>
                             <constraint firstItem="eMB-Eh-kp8" firstAttribute="width" secondItem="eMB-Eh-kp8" secondAttribute="height" multiplier="4:1" id="npe-FX-4bz"/>
                             <constraint firstItem="eMB-Eh-kp8" firstAttribute="top" secondItem="Us2-vE-JE2" secondAttribute="bottom" constant="8" symbolic="YES" id="o3B-UB-DSL"/>
                             <constraint firstItem="HQX-vj-wlS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oKl-pL-Tf7"/>
@@ -246,6 +269,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Hearthstone Collection" id="pGo-1e-56A"/>
                     <connections>
+                        <outlet property="manaSliderValue" destination="Zt7-TU-juS" id="Jn8-Ep-Otp"/>
                         <outlet property="searchTextField" destination="4Da-54-rt9" id="vVy-lS-End"/>
                         <segue destination="lrB-xU-K3x" kind="show" identifier="classCollection" id="Dfl-cg-rKx"/>
                         <segue destination="lrB-xU-K3x" kind="show" identifier="searchAll" id="vxX-7n-Z79"/>
@@ -260,7 +284,7 @@
         <scene sceneID="snp-2Y-XE3">
             <objects>
                 <collectionViewController id="lrB-xU-K3x" customClass="CardCollectionViewController" customModule="HearthApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k0d-UR-YJS">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="k0d-UR-YJS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

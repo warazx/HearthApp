@@ -21,16 +21,18 @@ class HearthApiHelper {
         }
     }
     
-    func searchForClassCollection(playerClass: String, onComplete: @escaping ([Card]) -> Void) {
-        let urlString = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/" + playerClass + "?collectible=1"
+    func searchForClassCollection(playerClass: String, manaCost: Int?, onComplete: @escaping ([Card]) -> Void) {
+        var urlString = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/classes/" + playerClass + "?collectible=1"
+        if (manaCost != nil) { urlString += "&cost=\(manaCost!)" }
         let request = createRequest(stringForUrl: urlString)
         beginTask(request) {
             onComplete($0)
         }
     }
     
-    func searchForSetCollection(cardSet: String, onComplete: @escaping ([Card]) -> Void) {
-        let urlString = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/" + cardSet + "?collectible=1"
+    func searchForSetCollection(cardSet: String, manaCost: Int?, onComplete: @escaping ([Card]) -> Void) {
+        var urlString = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/sets/" + cardSet + "?collectible=1"
+        if (manaCost != nil) { urlString += "&cost=\(manaCost!)" }
         let request = createRequest(stringForUrl: urlString)
         beginTask(request) {
             onComplete($0)

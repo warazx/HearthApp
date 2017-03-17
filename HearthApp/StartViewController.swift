@@ -11,6 +11,8 @@ import UIKit
 class StartViewController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var manaSliderValue: UILabel!
+    var manaCostFilterValue: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,21 @@ class StartViewController: UIViewController {
         performSegue(withIdentifier: "classCollection", sender: sender)
     }
     
+    @IBAction func manaSlider(_ sender: UISlider) {
+        let manaValue = Int(sender.value)
+        var manaText = ""
+        
+        if manaValue >= 0 {
+            manaText = "\(manaValue)"
+            manaCostFilterValue = manaValue
+        } else {
+            manaText = "Off"
+            manaCostFilterValue = nil
+        }
+        
+        manaSliderValue.text = manaText
+    }
+    
     func loadBackground() {
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "background.jpg")?.draw(in: self.view.bounds)
@@ -56,11 +73,13 @@ class StartViewController: UIViewController {
             let button = sender as! UIButton
             destination.searchText = (button.titleLabel?.text)!
             destination.mode = .Class
+            destination.manaCost = manaCostFilterValue
         }
         if segue.identifier == "setCollection", let destination = segue.destination as? CardCollectionViewController {
             let button = sender as! UIButton
             destination.searchText = (button.titleLabel?.text)!
             destination.mode = .Set
+            destination.manaCost = manaCostFilterValue
         }
         
         // Get the new view controller using segue.destinationViewController.
