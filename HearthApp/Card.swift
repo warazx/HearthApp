@@ -1,11 +1,3 @@
-//
-//  Card.swift
-//  HearthApp
-//
-//  Created by Christian Karlsson on 2017-03-09.
-//  Copyright © 2017 Christian Karlsson. All rights reserved.
-//
-
 import Foundation
 
 class Card {
@@ -20,7 +12,6 @@ class Card {
     let text : String
     let playerClass : PlayerClass
     let imageURL : URL
-    
     
     init(cardId: String, name: String, cardSet: CardSet, type: CardType, rarity: CardRarity, cost: Int, attack: Int, health: Int, class playerClass: PlayerClass, imageURL: String, text: String) {
         self.cardId = cardId

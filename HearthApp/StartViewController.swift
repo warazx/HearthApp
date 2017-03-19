@@ -1,11 +1,3 @@
-//
-//  StartViewController.swift
-//  HearthApp
-//
-//  Created by Christian Karlsson on 2017-03-09.
-//  Copyright © 2017 Christian Karlsson. All rights reserved.
-//
-
 import UIKit
 
 class StartViewController: UIViewController {
@@ -17,15 +9,8 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadBackground()
-        
-        //self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background"))
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     @IBAction func goToSetCollection(_ sender: UIButton) {
         performSegue(withIdentifier: "setCollection", sender: sender)
     }
@@ -61,9 +46,6 @@ class StartViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: bgImage)
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchAll", let destination = segue.destination as? CardCollectionViewController {
             destination.searchText = searchTextField.text!
@@ -81,10 +63,5 @@ class StartViewController: UIViewController {
             destination.mode = .Set
             destination.manaCost = manaCostFilterValue
         }
-        
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
- 
-
 }

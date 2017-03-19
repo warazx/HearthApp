@@ -1,11 +1,3 @@
-//
-//  HearhApiHelper.swift
-//  HearthApp
-//
-//  Created by Christian Karlsson on 2017-03-09.
-//  Copyright © 2017 Christian Karlsson. All rights reserved.
-//
-
 import Foundation
 import SwiftyJSON
     
@@ -75,7 +67,6 @@ class HearthApiHelper {
             let text = item["text"].stringValue
             
             cards.append(Card(cardId: id, name: name, cardSet: set, type: type, rarity: rarity, cost: cost, attack: attack, health: health, class: playerClass, imageURL: imageURL, text: text))
-            NSLog("Added card")
         }
         return cards
     }

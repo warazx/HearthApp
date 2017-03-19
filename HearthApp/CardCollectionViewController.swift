@@ -1,11 +1,3 @@
-//
-//  CardCollectionViewController.swift
-//  HearthApp
-//
-//  Created by Christian Karlsson on 2017-03-09.
-//  Copyright © 2017 Christian Karlsson. All rights reserved.
-//
-
 import UIKit
 
 private let reuseIdentifier = "Cell"
@@ -33,20 +25,10 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         case .Set:
             searchForSetCollection(cardSet: searchText)
         }
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        /* Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)*/
-
-        // Do any additional setup after loading the view.
     }
     
     func loadBackground() {
-        
         self.collectionView?.backgroundView = UIImageView(image: UIImage(named: "background.jpg"))
-        //self.collectionView?.backgroundColor = UIColor(patternImage: bgImage)
     }
     
     func searchForCard(word: String) {
@@ -71,37 +53,21 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         self.cards = cards
         DispatchQueue.main.async {
             self.collectionView?.reloadData()
-            NSLog("Reloading cells... cards contain \(cards.count)")
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return cards.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
         
-        // Configure the cell
         let currentCard = cards[indexPath.row]
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: currentCard.imageURL) {
@@ -135,35 +101,4 @@ class CardCollectionViewController: UICollectionViewController, UICollectionView
         case Class
         case Set
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 }
